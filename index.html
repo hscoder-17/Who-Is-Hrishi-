@@ -4,31 +4,191 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Hrishi's Website</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #08080f;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Navigation bar */
+        nav {
+            height: 70px;
+            background: #0d0d15;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 6%;
+            border-bottom: 1px solid #22222d;
+        }
+
+        nav h2 {
+            font-family: Georgia, serif;
+            letter-spacing: 2px;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 35px;
+            list-style: none;
+        }
+
+        nav a {
+            color: #aaa;
+            text-decoration: none;
+            font-size: 14px;
+            letter-spacing: 2px;
+        }
+
+        nav a:hover {
+            color: white;
+        }
+
+        /* Main section */
+        .hero {
+            min-height: calc(100vh - 70px);
+            display: flex;
+            align-items: center;
+            gap: 7%;
+            padding: 60px 10%;
+        }
+
+        /* Photo */
+        .photo {
+            width: 48%;
+        }
+
+        .photo img {
+            width: 100%;
+            max-height: 600px;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Text */
+        .about {
+            width: 48%;
+        }
+
+        .about h1 {
+            font-size: 48px;
+            margin-bottom: 25px;
+            font-family: Georgia, serif;
+        }
+
+        .about h1 span {
+            color: #7892b5;
+        }
+
+        .about p {
+            color: #c5c5cc;
+            font-size: 18px;
+            line-height: 1.8;
+            margin-bottom: 25px;
+        }
+
+        .about h2 {
+            margin-top: 30px;
+            margin-bottom: 15px;
+            color: #7892b5;
+        }
+
+        .likes {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .like {
+            border: 1px solid #33333e;
+            padding: 10px 16px;
+            border-radius: 5px;
+            color: #ddd;
+        }
+
+        /* Phone */
+        @media (max-width: 800px) {
+            nav ul {
+                display: none;
+            }
+
+            .hero {
+                flex-direction: column;
+                padding: 40px 7%;
+            }
+
+            .photo,
+            .about {
+                width: 100%;
+            }
+
+            .about h1 {
+                font-size: 38px;
+            }
+        }
+    </style>
 </head>
 
 <body>
-<h1>Hello guys, I am Hrishikesh Santhosh</h1>
 
-    <h2>About Me</h2>
+    <!-- Navigation -->
+    <nav>
+        <h2>HRISHI</h2>
 
-    <p>
-        I'm 13 years old. I'm interested in technology, maths, soccer, cooking, badminton
-        and learning new things. I'm also learning how to code and build my own websites.
-    </p>
+        <ul>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#likes">LIKES</a></li>
+            <li><a href="#contact">CONNECT</a></li>
+        </ul>
+    </nav>
 
-    <h2>Things I Like</h2>
 
-    <ul>
-        <li>⚽Soccer</li>
-        <li 📐 Math</li>
-        <li>🎧 Listening To Music</li>
-        <li>👨🏻‍💻Coding</li>
-        <li>✎𓂃 Drawing</li>
-        <li>🕵Discovering New Thigs</li>
-    </ul>
+    <!-- Main section -->
+    <section class="hero">
+
+        <!-- Your photo -->
+        <div class="photo">
+            <img src="profile.jpg" alt="Photo of Hrishi">
+        </div>
+
+
+        <!-- About you -->
+        <div class="about" id="about">
+
+            <h1>Hi, I'm <span>Hrishi.</span> 👋</h1>
+
+            <p>
+                I'm 13 years old and I'm interested in soccer, music,
+                coding, and math.
+            </p>
+
+            <p>
+                I'm currently learning how to build websites and improve
+                my coding skills. This website is one of my projects.
+            </p>
+
+            <h2 id="likes">Things I Like</h2>
+
+            <div class="likes">
+                <div class="like">⚽ Soccer</div>
+                <div class="like">🎵 Music</div>
+                <div class="like">💻 Coding</div>
+                <div class="like">📐 Math</div>
+            </div>
+
+        </div>
+
+    </section>
 
 </body>
 
 </html>
-      
